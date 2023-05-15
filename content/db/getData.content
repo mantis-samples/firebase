@@ -1,0 +1,35 @@
+<h1>Realtime DB</h1>
+<h3><mono>getData</mono></h3>
+<div align="center">
+<p>
+	Located in <a href="@pathto(assets/js/firebase-db)">@pathto(assets/js/firebase-db)</a> [<mono>\@pathto(assets/js/firebase-db)</mono>].
+</p>
+<pre class="prettyprint inline">
+/**
+ * reads data from database
+ * 
+ * eg. getData("users/" + uid).then((data) => {..});
+ */
+
+function getData(ref_str) {
+  return firebase.database().ref(ref_str).get();
+}
+</pre>
+</div>
+
+<h3><mono>getData</mono> example</h3>
+<div align="center">
+<pre class="prettyprint inline">
+getData('users/' + firebase.auth().currentUser.uid).then((data) => {
+	var json = JSON.parse(JSON.stringify(data));
+	document.getElementById("name").value = json.name;
+	document.getElementById("plan").value = json.plan;
+	document.getElementById("credits").value = json.credits;
+});
+</pre>
+</div>
+
+<h3>working example</h3>
+<p align="center">
+	<a href=@pathto(settings/details)>@pathto(settings/details)</a> [<mono>\@pathto(settings/details)</mono>]
+</p>

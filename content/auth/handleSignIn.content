@@ -1,0 +1,40 @@
+<h1>Realtime DB - <mono>set</mono></h1>
+<h3><mono>setData</mono></h3>
+<div align="center">
+<p>
+	Located in <a href="@pathto(assets/js/firebase-db)">@pathto(assets/js/firebase-db)</a> [<mono>\@pathto(assets/js/firebase-db)</mono>].
+</p>
+<pre class="prettyprint inline">
+/**
+ * writes data to database
+ * 
+ * eg. setData("users/" + uid, {json});
+ */
+
+function setData(ref_str, data) {
+  firebase.database().ref(ref_str).set(data);
+}
+</pre>
+</div>
+
+<h3><mono>setData</mono> example</h3>
+<div align="center">
+<pre class="prettyprint inline">
+	var email = document.getElementById("email").value,
+	    name = document.getElementById("name").value,
+	    plan = document.getElementById("plan").value,
+	    credits = document.getElementById("credits").value;
+
+	setData('users/' + firebase.auth().currentUser.uid, {
+		email: email, 
+		name: name, 
+		plan: plan, 
+		credits: credits
+	});
+</pre>
+</div>
+
+<h3>working example</h3>
+<p align="center">
+	<a href=@pathto(settings/details)>@pathto(settings/details)</a> [<mono>\@pathto(settings/details)</mono>]
+</p>

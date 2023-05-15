@@ -1,0 +1,39 @@
+<div align="center">
+	<div id="sign-in-form">
+		<div class="input-box toggle-mode width-20em">
+			<input
+				autofocus
+				class="icons-0x"
+				id="email"
+				name="email"
+				placeholder="email"
+				type="email"
+				spellcheck="false"
+				@//onkeypress="keyDownEvent(this)"
+			>
+		</div>
+
+		<div class="input-box toggle-mode width-20em">
+			<input 
+				class="icons-0x"
+				id="password"
+				name="password"
+				placeholder="password"
+				type="password"
+				spellcheck="false"
+				@//onkeypress="keyDownEvent(this)"
+			>
+		</div>
+
+		<button id="sign-in-button" class="toggle-mode" onclick="handleSignIn()">sign in</button><br>
+		<button id="sign-in-Google-button" class="toggle-mode" onclick="handleGoogleSignIn()"><img src="@pathtofile(output/assets/images/google.svg)" width="20px"> &nbsp; continue with Google</button><br>
+	</div>
+</div>
+
+<script>
+	document.addEventListener("keypress", function onEvent(event) {
+	    if(event.key === "Enter") {
+	        handleSignIn();
+	    }
+	});
+</script>

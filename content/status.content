@@ -1,0 +1,9 @@
+<div align="center">
+	<!-- Container where we'll display the user details -->
+	<div class="auth-details-container">
+		Firebase sign-in status: <pre id="auth-status">Unknown</pre>
+		<div>Firebase auth <mono>currentUser</mono> object value:</div>
+			<pre class="prettyprint wrap"><code id="auth-account-details">null</code></pre>
+		</div>
+	</div>
+</div>

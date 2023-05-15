@@ -1,0 +1,15 @@
+<h2>Realtime DB - integration</h2>
+<p>
+	Place the following somewhere in <mono>&lt;head&gt;...&lt;/head&gt;</mono> or at the end of <mono>&lt;body&gt;...&lt;/body&gt;</mono>:
+</p>
+<div align="center">
+<pre class="prettyprint inline">
+<script src="/__/firebase/9.14.0/firebase-database-compat.js"></script>
+
+<script src="\@pathto(assets/js/firebase-db)"></script>
+</pre>
+</div>
+
+<p>
+	See also <a href="@pathto(assets/js/firebase-db)">@pathto(assets/js/firebase-db)</a> (<mono>\@pathto(assets/js/firebase-db)</mono>)
+</p>

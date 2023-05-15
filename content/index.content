@@ -1,0 +1,5 @@
+<div align="center" style="margin-top: 30px">
+	<img src="@pathtofile(output/assets/images/firebase.svg)" style="width: 150px">
+</div>
+
+<h3>Nift scaffolding for <a href="https://firebase.google.com">Google Firebase</a></h3>

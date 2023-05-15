@@ -1,0 +1,49 @@
+<div align="center">
+	<div id="sign-up-form">
+		<div class="input-box toggle-mode width-20em">
+			<input
+				autofocus
+				class="icons-0x"
+				id="email"
+				name="email"
+				placeholder="email"
+				type="email"
+				spellcheck="false"
+			>
+		</div>
+
+		<div class="input-box toggle-mode width-20em">
+			<input 
+				autofocus
+				class="icons-0x"
+				id="password"
+				name="password"
+				placeholder="password"
+				type="password"
+				spellcheck="false"
+			>
+		</div>
+
+		<div class="input-box toggle-mode width-20em">
+			<input 
+				autofocus
+				class="icons-0x"
+				id="confirm-password"
+				name="confirm-password"
+				placeholder="confirm password"
+				type="password"
+				spellcheck="false"
+			>
+		</div>
+
+		<button id="sign-up-button" class="toggle-mode" onclick="handleSignUp()">sign up</button><br>
+	</div>
+</div>
+
+<script>
+	document.addEventListener("keypress", function onEvent(event) {
+	    if(event.key === "Enter") {
+	        handleSignUp();
+	    }
+	});
+</script>

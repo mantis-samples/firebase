@@ -1,0 +1,137 @@
+<div align="center">
+	<div id="edit-user-data-form">
+		<table>
+			<tr>
+				<th>
+					uid
+				</th>
+				<th>
+					<div class="input-box toggle-mode width-20em">
+						<input
+							autofocus
+							readonly
+							class="icons-0x"
+							id="uid"
+							name="uid"
+							placeholder="uid"
+							type="text"
+							spellcheck="false"
+						>
+					</div>
+				</th>
+			</tr>
+			<tr>
+				<th>
+					email
+				</th>
+				<th>
+					<div class="input-box toggle-mode width-20em">
+						<input
+							class="icons-0x"
+							id="email"
+							name="email"
+							placeholder="email"
+							type="text"
+							spellcheck="false"
+						>
+					</div>
+				</th>
+			</tr>
+			<tr>
+				<th>
+					name
+				</th>
+				<th>
+					<div class="input-box toggle-mode width-20em">
+						<input
+							class="icons-0x"
+							id="name"
+							name="name"
+							placeholder="name"
+							type="text"
+							spellcheck="false"
+						>
+					</div>
+				</th>
+			</tr>
+			<tr>
+				<th>
+					plan
+				</th>
+				<th>
+					<div class="input-box toggle-mode width-20em">
+						<input 
+							readonly
+							class="icons-0x"
+							id="plan"
+							name="plan"
+							placeholder="plan"
+							type="text"
+							spellcheck="false"
+						>
+					</div>
+				</th>
+			</tr>
+			<tr>
+				<th>
+					credits
+				</th>
+				<th>
+					<div class="input-box toggle-mode width-20em">
+						<input 
+							readonly
+							class="icons-0x"
+							id="credits"
+							name="credits"
+							placeholder="credits"
+							type="number"
+							spellcheck="false"
+						>
+					</div>
+				</th>
+			</tr>
+		</table>
+
+		<button id="save-user-data-button" class="toggle-mode" onclick="editUserData()">save</button><br>
+	</div>
+</div>
+
+<script>
+	function editUserData() {
+		var name = document.getElementById("name").value,
+		    email = document.getElementById("email").value,
+		    plan = document.getElementById("plan").value,
+		    credits = document.getElementById("credits").value;
+
+		//setUserData(email, name, plan, credits);
+		//alert('users/' + firebase.auth().currentUser.uid);
+		setData('users/' + firebase.auth().currentUser.uid, {
+			email: email, 
+			name: name, 
+			plan: plan, 
+			credits: credits
+		});
+	}
+
+	document.addEventListener("keypress", function onEvent(event) {
+	    if(event.key === "Enter") {
+	        editUserData();
+	    }
+	});
+
+
+	window.addEventListener('load', function() {
+		firebase.auth().onAuthStateChanged(function(user) {
+			document.getElementById("uid").value = user.uid;
+			document.getElementById("email").value = user.email;
+
+			firebase.database().ref('users/' + user.uid).get().then((data) => {
+				var json = JSON.parse(JSON.stringify(data));
+				document.getElementById("name").value = json.name;
+				document.getElementById("plan").value = json.plan;
+				document.getElementById("credits").value = json.credits;
+			});
+
+		});
+	});
+</script>

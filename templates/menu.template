@@ -1,0 +1,60 @@
+<div class="menu-bars">
+  <i id="open-menu-icon" class="fa fa-bars-png fa-rnbw" onclick="show_menu()"></i>
+</div>
+
+<div id="menu-page">
+  <div class="menu-cross" >
+    <i id="close-menu-icon" class="fa fa-xmark-png fa-rnbw" onclick="close_menu()"></i>
+  </div>
+  
+  <nav id="nav" class="noselect">
+    <ul>
+      <li class="item li-menu li-dark">
+        <a class="item-link" href="@pathto(index)">home</a>
+      </li>
+      <li class="item li-menu li-dark has-submenu">
+        <a tabindex="0" href="#" class="submenu-link" onclick="toggle_submenu(0)">auth<i class="submenu-link-icon fa fa-angle-down-png fa-1x"></i></a>
+        <ul class="submenu" align="center">
+          <li class="subitem"><a href="@pathto(auth/integration)">integration</a></li>
+          <li class="subitem"><a href="@pathto(auth/handleSignIn)"><mono>handleSignIn</mono></a></li>
+          <li class="subitem"><a href="@pathto(auth/handleSignOut)"><mono>handleSignOut</mono></a></li>
+          <li class="subitem"><a href="@pathto(auth/handleSignUp)"><mono>handleSignUp</mono></a></li>
+          <li class="subitem"><a href="@pathto(reset-password)">reset-password</a></li>
+          <li class="subitem"><a href="@pathto(status)">status</a></li>
+        </ul>
+      </li>
+      <li class="item li-menu li-dark has-submenu">
+        <a tabindex="0" href="#" class="submenu-link" onclick="toggle_submenu(1)">storage<i class="submenu-link-icon fa fa-angle-down-png fa-1x"></i></a>
+        <ul class="submenu" align="center">
+          <li class="subitem"><a href="#">example</a></li>
+          <li class="subitem"><a href="#">example</a></li>
+          <li class="subitem"><a href="#">example</a></li>
+        </ul>
+      </li>
+      <li class="item li-menu li-dark has-submenu">
+        <a tabindex="0" href="#" class="submenu-link" onclick="toggle_submenu(2)">database<i class="submenu-link-icon fa fa-angle-down-png fa-1x"></i></a>
+        <ul class="submenu" align="center">
+          <li class="subitem"><a href="@pathto(db/integration)">integration</a></li>
+          <li class="subitem"><a href="@pathto(db/getData)"><mono>getData</mono></a></li>
+          <li class="subitem"><a href="@pathto(db/setData)"><mono>setData</mono></a></li>
+          <li class="subitem"><a href="@pathto(db/updateData)"><mono>updateData</mono></a></li>
+        </ul>
+      </li>
+      <li class="item li-menu li-dark has-submenu">
+        <a tabindex="0" href="#" class="submenu-link" onclick="toggle_submenu(3)">functions<i class="submenu-link-icon fa fa-angle-down-png fa-1x"></i></a>
+        <ul class="submenu" align="center">
+          <li class="subitem"><a href="#">example</a></li>
+          <li class="subitem"><a href="#">example</a></li>
+          <li class="subitem"><a href="#">example</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <a href="@pathto(settings/details)" id="button-details" class="no-display"><button class="toggle-mode">details</button></a>
+  <a href="@pathto(sign-out)" id="button-sign-out" class="no-display"><button class="toggle-mode">sign out</button></a>
+  <a href="@pathto(sign-in)" id="button-sign-in"><button class="toggle-mode">sign in</button></a>
+  <a href="@pathto(sign-up)" id="button-sign-up"><button class="toggle-mode">sign up</button></a>
+  <a href="@pathto(reset-password)" id="button-reset-password"><button class="toggle-mode">reset password</button></a>
+  <a href="@pathto(status)" id="button-status"><button class="toggle-mode">status</button></a>
+</div>
