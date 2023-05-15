@@ -1,0 +1,101 @@
+/**
+ *  icon
+ */
+.fa {
+  cursor: pointer;
+  display: inline-block;
+  width: 2em;
+  vertical-align: middle;
+}
+
+/**
+ * sizes
+ */
+.fa-1x {
+  width: 1em;
+}
+.fa-1-5x {
+  width: 1.5em;
+}
+.fa-2x {
+  width: 2em;
+}
+
+/**
+ * colors
+ */
+.fa-green {
+  filter: invert(50%) sepia(100%) saturate(200%) hue-rotate(75deg) brightness(100%) contrast(100%);
+}
+.fa-green:hover {
+  filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(187deg) brightness(119%) contrast(119%);
+}
+
+
+/**
+ * brands
+ */
+
+.fa-github:before {
+  content: url("../icons/github.svg");
+}
+.fa-google:before {
+  content: url("../icons/google.svg"); 
+}
+.fa-orcid:before {
+  content: url("../icons/orcid.svg"); 
+}
+
+.fa-github-png{
+  content: url('../icons/inverted/github.png');
+}
+.fa-google-png {
+  content: url("../icons/inverted/google.png"); 
+}
+.fa-orcid-png {
+  content: url("../icons/inverted/orcid.png"); 
+}
+
+
+/**
+ * solid
+ */
+.fa-angle-down:before {
+  content: url("../icons/angle-down-solid.svg"); 
+}
+.fa-angle-up:before {
+  content: url("../icons/angle-up-solid.svg"); 
+}
+.fa-bars:before {
+  content: url("../icons/bars-solid.svg"); 
+}
+.fa-box-archive:before {
+  content: url("../icons/box-archive-solid.svg"); 
+}
+.fa-envelope:before {
+  content: url("../icons/envelope-regular.svg"); 
+}
+.fa-xmark:before {
+  content: url("../icons/xmark-solid.svg"); 
+}
+
+.fa-angle-down-png {
+  content: url("../icons/inverted/angle-down-solid.png"); 
+  margin-left: 5px;
+}
+.fa-angle-up-png {
+  content: url("../icons/inverted/angle-up-solid.png"); 
+  margin-left: 5px;
+}
+.fa-bars-png {
+  content: url("../icons/inverted/bars-solid.png"); 
+}
+.fa-box-archive-png {
+  content: url("../icons/inverted/box-archive-solid.png"); 
+}
+.fa-envelope-png {
+  content: url("../icons/inverted/envelope-regular.png"); 
+}
+.fa-xmark-png {
+  content: url("../icons/inverted/xmark-solid.png"); 
+}
